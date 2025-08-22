@@ -1,0 +1,28 @@
+﻿<Window x:Class="abrirNovaJanela.novaJanela"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:abrirNovaJanela"
+        mc:Ignorable="d"
+        Title="novaJanela" Height="450" Width="800">
+    <Grid>
+        <Label Content="BOM DIA!" HorizontalAlignment="Center" Height="61" Margin="0,118,0,0" VerticalAlignment="Top" Width="228" TextElement.FontSize="40" TextElement.FontFamily="Copperplate Gothic Bold"/>
+        <Label x:Name="textoUser" Content="" HorizontalAlignment="Left" Height="30" Margin="332,0,0,0" VerticalAlignment="Center" Width="116" Visibility="Hidden"/>
+        <Button x:Name="fechar" Content="Fechar" HorizontalAlignment="Left" Height="68" Margin="268,284,0,0" VerticalAlignment="Top" Width="238" Background="PaleVioletRed" BorderThickness="5,5,5,5" SnapsToDevicePixels="True" BorderBrush="Crimson" RenderTransformOrigin="0.5,0.5" TextElement.FontSize="16" TextElement.FontWeight="Bold" TextElement.Foreground="MediumVioletRed" Click="fechar_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.291"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.62"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label x:Name="textoNome" Content="" HorizontalAlignment="Left" Height="31" Margin="320,199,0,0" VerticalAlignment="Top" Width="128" TextElement.FontSize="20"/>
+
+    </Grid>
+</Window>
