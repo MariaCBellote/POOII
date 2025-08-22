@@ -1,0 +1,17 @@
+﻿<Window x:Class="ConversorTemp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ConversorTemp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="304" Width="544">
+    <Grid>
+        <Button x:Name="convert" Content="Converter" HorizontalAlignment="Left" Height="46" Margin="22,171,0,0" VerticalAlignment="Top" Width="231" Background="CadetBlue" BorderThickness="5" BorderBrush="SteelBlue" Click="convert_Click"/>
+        <TextBox x:Name="tempC" HorizontalAlignment="Left" Height="59" Margin="22,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" Background="AntiqueWhite" BorderThickness="5" TextChanged="tempC_TextChanged"/>
+        <TextBlock x:Name="textTempC" HorizontalAlignment="Left" Height="59" Margin="288,85,0,0" TextWrapping="Wrap" Text="Graus Celsius" VerticalAlignment="Top" Width="213" Background="FloralWhite"/>
+        <TextBlock x:Name="texteTempConvertida" HorizontalAlignment="Left" Margin="288,171,0,0" TextWrapping="Wrap" Text="Graus Fahrenheit" VerticalAlignment="Top" Height="46" Width="213" Background="FloralWhite"/>
+        <Label Content="Digite uma temperatura em celsius:" HorizontalAlignment="Left" Height="27" Margin="22,53,0,0" VerticalAlignment="Top" Width="213"/>
+
+    </Grid>
+</Window>
