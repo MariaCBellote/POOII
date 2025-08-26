@@ -1,0 +1,24 @@
+﻿<Window x:Class="RedeAmigos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RedeAmigos"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="listar" Content="Listar Todos" HorizontalAlignment="Left" Height="26" Margin="318,373,0,0" VerticalAlignment="Top" Width="82" Click="Button_Click" BorderThickness="2"/>
+        <Label Content="Rede de Amigos" HorizontalAlignment="Left" Height="54" Margin="474,28,0,0" VerticalAlignment="Top" Width="246" FontWeight="Bold" TextElement.FontSize="30" RenderTransformOrigin="0.5,0.358"/>
+        <Label Content="Apelido" HorizontalAlignment="Left" Height="24" Margin="436,119,0,0" VerticalAlignment="Top" Width="57"/>
+        <Label Content="Email" HorizontalAlignment="Left" Height="24" Margin="436,192,0,0" VerticalAlignment="Top" Width="57"/>
+        <Label Content="Telefone" HorizontalAlignment="Left" Height="24" Margin="436,263,0,0" VerticalAlignment="Top" Width="57"/>
+        <TextBox x:Name="apelido" HorizontalAlignment="Left" Height="31" Margin="506,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="182" TextChanged="apelido_TextChanged"/>
+        <TextBox x:Name="email" HorizontalAlignment="Left" Height="31" Margin="506,192,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="182"/>
+        <TextBox x:Name="telefone" HorizontalAlignment="Left" Height="31" Margin="506,256,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="182"/>
+        <Button x:Name="cadastro" Content="Cadastrar" HorizontalAlignment="Left" Height="26" Margin="443,339,0,0" VerticalAlignment="Top" Width="82" Click="Button_Click" BorderThickness="2"/>
+        <Button x:Name="busca" Content="Buscar" HorizontalAlignment="Left" Height="26" Margin="556,339,0,0" VerticalAlignment="Top" Width="82" Click="Button_Click" BorderThickness="2"/>
+        <Button x:Name="remove" Content="Remover" HorizontalAlignment="Left" Height="26" Margin="670,339,0,0" VerticalAlignment="Top" Width="82" Click="Button_Click" BorderThickness="2" RenderTransformOrigin="0.522,0.268"/>
+        <TextBox x:Name="lista" HorizontalAlignment="Left" Height="243" Margin="63,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="337" TextChanged="TextBox_TextChanged"/>
+
+    </Grid>
+</Window>
