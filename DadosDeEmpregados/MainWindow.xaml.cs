@@ -56,7 +56,7 @@ namespace DadosDeEmpregados
 
             if(conexao !=null && VerificarCampos())
             {
-            emp.Salvar(conexao);
+            emp.salvar(conexao);
             status.Content= "Salvo OK";
             LimparCampos();
             }
@@ -79,3 +79,4 @@ namespace DadosDeEmpregados
     }
 
 }
+
