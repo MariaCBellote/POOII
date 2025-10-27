@@ -76,7 +76,21 @@ namespace DadosDeEmpregados
         {
 
         }
+
+        private bool VerificarCampos()
+        {
+          return matricula.Text=="" && cpf.Text!="" && nome.Text!= "" && endereco.Text!="";
+        }
+
+        private void LimparCampos()
+        {
+          matricula.Text="";
+          cpf.Text="";
+          nome.Text="";
+          endereco.Text="";
+        }
     }
 
 }
+
 
