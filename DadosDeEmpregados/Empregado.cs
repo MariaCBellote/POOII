@@ -43,8 +43,41 @@ namespace DadosDeEmpregados
                 cmd.ExecuteNonQuery();
             }
         }
-        public void pesquisar() { }
+        public List<Empregado>? pesquisar(int matriculaParametro, SqlConnection conexao) { 
+
+            Console.WriteLine("==Recuperando Empregado==");
+            List<Empregado>? EmpregadoLido=null;
+            var cmd= conexao.CreateCommand();
+
+            if(matriculaParametro == 0){
+                cmd.CommandText="SELECT * FROM Empregado";
+            }
+            else{
+                cmd.CommandText="SELECT * FROM Empregado WHERE Matricula= @matriculaBusca";
+                cmd.Parameters.Add(new SqlParameter("matriculaBusca", matriculaParametro));
+            }
+            var resultado=cmd.ExecuteReader();
+
+            if(resultado!=null){
+                EmpregadosLido=new();
+
+                while(resultado.Read()){
+                    Empregado EmpregadoLido=new();
+                    {
+                        Matricula=resultado.GetInt32("Matricula"),
+                        CPF=resultado.GetString("CPF"),
+                        Nome=resultado.GetString("Nome"),
+                        Endereco=resultado.GetString("Endereco")
+                        };
+                EmpregadosLido.Add(EmpregadoLido);
+                  }
+                 resultado.Close();
+            }
+        return EmpregadosLido;
+        
+        }
         public void excluir() { }
         public void alterar() { }
     }
 }
+
