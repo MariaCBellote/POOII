@@ -54,6 +54,17 @@ namespace DadosDeEmpregados
 
             };
 
+            if(conexao !=null && VerificarCampos())
+            {
+            emp.Salvar(conexao);
+            status.Content= "Salvo OK";
+            LimparCampos();
+            }
+            else
+            {
+            status.Content= "Não Salvo";
+            }
+
         }
 
         private void excluir_Click(object sender, RoutedEventArgs e)
@@ -66,4 +77,5 @@ namespace DadosDeEmpregados
 
         }
     }
+
 }
